@@ -7,22 +7,19 @@ import com.zxsample.demo.application.model.InventoryDTO;
 import com.zxsample.demo.application.model.PagingQueryResult;
 import com.zxsample.demo.test.WithSpringTestBase;
 import org.assertj.core.api.Assertions;
-import org.junit.Before;
-import org.junit.Test;
+
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 
-import java.net.URI;
-
-import static org.junit.Assert.*;
 
 @Transactional
 @AutoConfigureMockMvc
@@ -33,7 +30,7 @@ public class InventoryManagerControllerTest extends WithSpringTestBase {
 
     private MockMvc mockMvc;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }

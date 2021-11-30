@@ -9,7 +9,7 @@ import com.zxsample.demo.domain.repository.InventoryRepository;
 import com.zxsample.demo.test.WithSpringTestBase;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.MatcherAssert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
